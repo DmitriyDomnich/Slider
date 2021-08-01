@@ -16,6 +16,16 @@ downBtn.addEventListener('click', (e) => {
     changeSlide('down');
 });
 
+document.addEventListener('wheel', (e) => {
+    console.log(e);
+    if (e.deltaY < 0) {
+        changeSlide('up');
+    } else {
+        changeSlide('down');
+    }
+})
+
+
 
 function changeSlide(direction) {
     if (direction === 'up') {
